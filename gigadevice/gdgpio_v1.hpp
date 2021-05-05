@@ -11,7 +11,11 @@
 //____________________INCLUDE_____________________//
 #include <type_traits>
 
-
+#if defined (GD32VF103xx)
+  #include "spec/gd32vf103xx_gpio.hpp"
+#else
+  #error "You must define supported MCU"
+#endif
 
 
 
